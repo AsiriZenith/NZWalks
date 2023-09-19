@@ -5,6 +5,8 @@ D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\NZWalks.API.deps.jso
 D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\NZWalks.API.runtimeconfig.json
 D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\NZWalks.API.dll
 D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\NZWalks.API.pdb
+D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\AutoMapper.dll
+D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Humanizer.dll
 D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 D:\my projects\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
