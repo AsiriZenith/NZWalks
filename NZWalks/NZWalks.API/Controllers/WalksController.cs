@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using NZWalks.API.CustomActionFilters;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.DTO;
 using NZWalks.API.Repositories;
@@ -40,41 +41,29 @@ namespace NZWalks.API.Controllers
         }
 
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> Create([FromBody] AddWalkRequestDto addWalkRequest)
         {
-            if (ModelState.IsValid)
-            {
-                var walkDomainModel = _mapper.Map<Walk>(addWalkRequest);
-                await _walkRepository.CreatAsync(walkDomainModel);
-                return Ok(_mapper.Map<WalkDto>(walkDomainModel));
-            }
-            else
-            {
-                return BadRequest(ModelState);
-            }
+            var walkDomainModel = _mapper.Map<Walk>(addWalkRequest);
+            await _walkRepository.CreatAsync(walkDomainModel);
+            return Ok(_mapper.Map<WalkDto>(walkDomainModel));
         }
 
         [HttpPut]
         [Route("{id:Guid}")]
+        [ValidateModel]
         public async Task<IActionResult> Update([FromRoute] Guid id, UpdateWalkRequestDto requestDto)
         {
-            if (ModelState.IsValid)
+            var walkDomainModel = _mapper.Map<Walk>(requestDto);
+
+            walkDomainModel = await _walkRepository.UpdateAsync(id, walkDomainModel);
+
+            if (walkDomainModel == null)
             {
-                var walkDomainModel = _mapper.Map<Walk>(requestDto);
-
-                walkDomainModel = await _walkRepository.UpdateAsync(id, walkDomainModel);
-
-                if (walkDomainModel == null)
-                {
-                    return NotFound();
-                }
-
-                return Ok(_mapper.Map<WalkDto>(walkDomainModel));
+                return NotFound();
             }
-            else
-            {
-                return BadRequest(ModelState);
-            }
+
+            return Ok(_mapper.Map<WalkDto>(walkDomainModel));
         }
 
         [HttpDelete]
