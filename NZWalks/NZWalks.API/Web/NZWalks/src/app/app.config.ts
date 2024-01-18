@@ -10,6 +10,9 @@ import {
 import { routes } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { DATE_PIPE_DEFAULT_OPTIONS } from '@angular/common';
+import { environment } from '../environment/environment';
+
+export const BASE_URL = environment.apiUrl;
 
 export const appConfig: ApplicationConfig = {
   providers: [

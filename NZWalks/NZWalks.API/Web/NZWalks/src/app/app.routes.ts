@@ -1,7 +1,15 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo:'/home', pathMatch:'full' },
-    { path: '', component: AppComponent },
+  { path: '', redirectTo: '/walk', pathMatch: 'full' },
+  {
+    path: 'walk',
+    loadChildren: () =>
+      import('./module/walk/walk.routes').then((m) => m.walkRoutes),
+  },
+  {
+    path: 'region',
+    loadChildren: () =>
+      import('./module/region/region.routes').then((m) => m.regionRoutes),
+  },
 ];
