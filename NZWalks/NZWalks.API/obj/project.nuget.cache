@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rLIGoyJiPWo2KkHWjKFKuFfU6hYbISQkjSYf7BBzBfaiJQY2cyJhcR/2UsOqp52Oeo8ZZ9whc8AqjYNXHPjfxg==",
+  "dgSpecHash": "IszNjblK5aQ=",
   "success": true,
-  "projectFilePath": "D:\\my projects\\NZWalks\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
+  "projectFilePath": "D:\\my works\\NZWalks\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
