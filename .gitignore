@@ -1,1 +1,22 @@
+# Visual Studio
 .vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+
+# Rider
+.idea/
+
+# Others
+*.log
+*.userprefs
+
+# ASP.NET Specific
+*.dbmdl
+*.dbproj.schemaview
+
+# Publish directory
+wwwroot/
