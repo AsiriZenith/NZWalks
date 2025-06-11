@@ -1,1 +1,123 @@
+# -----------------
+# Core .NET files
+# -----------------
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.mdb
+*.log
+
+# -----------------
+# Visual Studio
+# -----------------
 .vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# -----------------
+# Rider
+# -----------------
+.idea/
+*.sln.iml
+
+# -----------------
+# VS Code
+# -----------------
+.vscode/
+.history/
+
+# -----------------
+# ASP.NET Specific
+# -----------------
+*.dbmdl
+*.dbproj.schemaview
+*.publish.xml
+wwwroot/
+Generated_Code/
+_ReSharper*/
+
+# -----------------
+# Build Output
+# -----------------
+TestResults/
+build/
+BuildArtifacts/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# -----------------
+# Others
+# -----------------
+*.userprefs
+*.ncrunch*
+*.orig
+*.bak
+*.tmp
+*.svclog
+*.scc
+*.sdf
+*.opendb
+*.suo
+*.tlog
+*.gpState
+
+# -----------------
+# Entity Framework
+# -----------------
+*.jfm
+*.cache
+migrations/
+
+# -----------------
+# Package Management
+# -----------------
+packages/
+*.nupkg
+.nuget/
+
+# -----------------
+# Logs
+# -----------------
+*.log
+logs/
+log/
+serilog-*.txt
+
+# -----------------
+# OS-specific
+# -----------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# -----------------
+# DotCover
+# -----------------
+.idea/.dotCover
+*.dotCover
+
+# -----------------
+# JetBrains Rider LocalHistory
+# -----------------
+.idea/.idea.LocalHistory/
+
+# -----------------
+# Docker
+# -----------------
+**/.dockerignore
+Dockerfile
+docker-compose*.yml
+
+# -----------------
+# Azure
+# -----------------
+appsettings.*.azure.json
