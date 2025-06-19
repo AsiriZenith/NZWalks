@@ -48,4 +48,27 @@ public class AuthController : ControllerBase
             return Ok(new { Message = "User registered successfully" });
         }
     }
+
+    // POST: api/auth/Login
+    [HttpPost]
+    [Route("Login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto)
+    {
+        var identityUser = await userManager.FindByEmailAsync(loginRequestDto.Username);
+
+        if (identityUser is null)
+        {
+            return BadRequest(new { Message = "Invalid username or password" });
+        }
+
+        var isPasswordValid = await userManager.CheckPasswordAsync(identityUser, loginRequestDto.Password);
+
+        if (!isPasswordValid)
+        {
+            return BadRequest(new { Message = "Invalid username or password" });
+        }
+        // Here you would typically generate a JWT token and return it
+        // For simplicity, we are returning a success message
+        return Ok(new { Message = "Login successful" });
+    }
 }
