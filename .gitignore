@@ -72,7 +72,6 @@ artifacts/
 # -----------------
 *.jfm
 *.cache
-migrations/
 
 # -----------------
 # Package Management
@@ -121,3 +120,4 @@ docker-compose*.yml
 # Azure
 # -----------------
 appsettings.*.azure.json
+/NZWalks/.vs/NZWalks/DesignTimeBuild/.dtbcache.v2
