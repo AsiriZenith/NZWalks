@@ -22,7 +22,7 @@ namespace NZWalks.API.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet] 
         public async Task<IActionResult> GetAll()
         {
             var regionsDomain = await regionRepository.GetAllAsync();
